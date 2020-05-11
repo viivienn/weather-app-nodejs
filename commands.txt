@@ -1,0 +1,24 @@
+nodemon src/app.js -e js,hbs
+
+npm i express@4.16.4
+npm i hbs@4.0.1
+npm i request@2.88.0
+npm i nodemon@1.19.0 --save-dev
+
+heroku -v
+heroku login
+
+ssh-keygen -t rsa -b 4096 "email"
+
+##ON WINDOWS
+Set-Service ssh-agent -StartupType Manual
+
+ssh-agent -s
+ssh-add ~/.ssh/id_rsa
+
+heroku keys:add
+
+heroku create application_name
+
+
+push to github and heroku code changes
